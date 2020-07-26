@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PlG-2I-DrK">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Single-->
+        <scene sceneID="0am-M3-FCI">
+            <objects>
+                <viewController id="3jt-65-WGB" customClass="SingleComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEZ-Fz-GhR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-F1-kHl">
+                                <rect key="frame" x="27" y="0.0" width="321" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3jt-65-WGB" id="cfc-aB-7QP"/>
+                                    <outlet property="delegate" destination="3jt-65-WGB" id="AdA-G2-hHE"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-aL-lEs">
+                                <rect key="frame" x="165.5" y="318" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="3jt-65-WGB" eventType="touchUpInside" id="Koy-Pd-oN8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ldc-F1-kHl" firstAttribute="leading" secondItem="GLh-BO-agb" secondAttribute="leading" constant="27" id="2F5-gr-Na8"/>
+                            <constraint firstItem="ldc-F1-kHl" firstAttribute="centerX" secondItem="GEZ-Fz-GhR" secondAttribute="centerX" id="G8b-F5-ouU"/>
+                            <constraint firstItem="ZB7-aL-lEs" firstAttribute="centerX" secondItem="GEZ-Fz-GhR" secondAttribute="centerX" id="q1K-il-nYl"/>
+                            <constraint firstItem="ZB7-aL-lEs" firstAttribute="top" secondItem="ldc-F1-kHl" secondAttribute="bottom" constant="102" id="rCd-It-pyX"/>
+                            <constraint firstItem="ldc-F1-kHl" firstAttribute="top" secondItem="GLh-BO-agb" secondAttribute="top" id="rQC-Np-YN3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GLh-BO-agb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="2iw-t8-GRM"/>
+                    <connections>
+                        <outlet property="singlePicker" destination="ldc-F1-kHl" id="zJ0-Eg-Rhy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pA-VN-oRV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="345"/>
+        </scene>
+        <!--Dependent-->
+        <scene sceneID="byB-km-aVW">
+            <objects>
+                <viewController id="PdO-aR-13S" customClass="DependentComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1xI-fW-Mpn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqr-qL-bqs">
+                                <rect key="frame" x="27" y="0.0" width="321" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PdO-aR-13S" id="9ON-6a-luw"/>
+                                    <outlet property="delegate" destination="PdO-aR-13S" id="kuA-de-Hbl"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61r-8I-m9i">
+                                <rect key="frame" x="165.5" y="318" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="PdO-aR-13S" eventType="touchUpInside" id="dZR-yt-Wxj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gqr-qL-bqs" firstAttribute="top" secondItem="Yry-jh-6hv" secondAttribute="top" id="40A-pE-CGP"/>
+                            <constraint firstItem="61r-8I-m9i" firstAttribute="centerX" secondItem="1xI-fW-Mpn" secondAttribute="centerX" id="Eyv-xa-yiI"/>
+                            <constraint firstItem="61r-8I-m9i" firstAttribute="top" secondItem="gqr-qL-bqs" secondAttribute="bottom" constant="102" id="FbC-Yb-mdt"/>
+                            <constraint firstItem="gqr-qL-bqs" firstAttribute="leading" secondItem="Yry-jh-6hv" secondAttribute="leading" constant="27" id="eBY-EC-8gb"/>
+                            <constraint firstItem="gqr-qL-bqs" firstAttribute="centerX" secondItem="1xI-fW-Mpn" secondAttribute="centerX" id="v3M-ZY-69P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yry-jh-6hv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dependent" image="dependenticon" id="B6Q-nF-KoA"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="gqr-qL-bqs" id="l6D-5D-3GD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msv-Cb-LWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="350"/>
+        </scene>
+        <!--Custom-->
+        <scene sceneID="D9v-nV-2M3">
+            <objects>
+                <viewController id="wt6-He-Ab4" customClass="CustomPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHo-9Y-NKb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QW-GE-McG">
+                                <rect key="frame" x="187.5" y="236" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxe-cv-yVA">
+                                <rect key="frame" x="172" y="260" width="31" height="30"/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="wt6-He-Ab4" eventType="touchUpInside" id="RjB-CO-jUJ"/>
+                                </connections>
+                            </button>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc1-S1-a5x">
+                                <rect key="frame" x="27" y="0.0" width="321" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wt6-He-Ab4" id="jTZ-pJ-e5q"/>
+                                    <outlet property="delegate" destination="wt6-He-Ab4" id="Iyi-r2-ezE"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uxe-cv-yVA" firstAttribute="top" secondItem="3QW-GE-McG" secondAttribute="bottom" constant="24" id="HgC-O2-Vha"/>
+                            <constraint firstItem="uc1-S1-a5x" firstAttribute="leading" secondItem="2SF-vg-EsJ" secondAttribute="leading" constant="27" id="KQ8-tr-lBE"/>
+                            <constraint firstItem="uxe-cv-yVA" firstAttribute="centerX" secondItem="iHo-9Y-NKb" secondAttribute="centerX" id="OQI-tK-N1n"/>
+                            <constraint firstItem="3QW-GE-McG" firstAttribute="top" secondItem="uc1-S1-a5x" secondAttribute="bottom" constant="20" id="Yrr-e6-OKl"/>
+                            <constraint firstItem="uc1-S1-a5x" firstAttribute="centerX" secondItem="3QW-GE-McG" secondAttribute="centerX" id="k0k-GM-eN3"/>
+                            <constraint firstItem="uc1-S1-a5x" firstAttribute="centerX" secondItem="iHo-9Y-NKb" secondAttribute="centerX" id="ocP-Fh-1tL"/>
+                            <constraint firstItem="uc1-S1-a5x" firstAttribute="top" secondItem="2SF-vg-EsJ" secondAttribute="top" id="qtm-tZ-oAL"/>
+                            <constraint firstItem="uc1-S1-a5x" firstAttribute="centerX" secondItem="uxe-cv-yVA" secondAttribute="centerX" id="ymQ-By-Urs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2SF-vg-EsJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="zAV-uJ-4Gn"/>
+                    <connections>
+                        <outlet property="button" destination="uxe-cv-yVA" id="rOk-ff-7Io"/>
+                        <outlet property="picker" destination="uc1-S1-a5x" id="m6W-il-w3w"/>
+                        <outlet property="winLabel" destination="3QW-GE-McG" id="etf-1x-chn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4f-59-gPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="31"/>
+        </scene>
+        <!--Date-->
+        <scene sceneID="2aX-fd-T2p">
+            <objects>
+                <viewController title="Date" id="ws1-Z9-BVm" customClass="DatePickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXl-2c-kq2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bYt-jH-7bY">
+                                <rect key="frame" x="28" y="0.0" width="319" height="216"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="631105200">
+                                    <!--2020-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0S-2C-VYa">
+                                <rect key="frame" x="165.5" y="318" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="ws1-Z9-BVm" eventType="touchUpInside" id="QG0-im-UYi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bYt-jH-7bY" firstAttribute="leading" secondItem="HGl-zR-dXe" secondAttribute="leading" constant="28" id="MM5-oD-j4Q"/>
+                            <constraint firstItem="bYt-jH-7bY" firstAttribute="top" secondItem="HGl-zR-dXe" secondAttribute="top" id="OvI-cl-cKh"/>
+                            <constraint firstItem="P0S-2C-VYa" firstAttribute="top" secondItem="bYt-jH-7bY" secondAttribute="bottom" constant="102" id="qxK-Po-ZVa"/>
+                            <constraint firstItem="bYt-jH-7bY" firstAttribute="centerX" secondItem="LXl-2c-kq2" secondAttribute="centerX" id="yUr-lv-GfJ"/>
+                            <constraint firstItem="P0S-2C-VYa" firstAttribute="centerX" secondItem="LXl-2c-kq2" secondAttribute="centerX" id="yrP-oo-jrj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HGl-zR-dXe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date" image="clockicon" id="TII-rt-JXl"/>
+                    <connections>
+                        <outlet property="datePicker" destination="bYt-jH-7bY" id="ybw-Yw-8l7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEi-w7-eF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-303"/>
+        </scene>
+        <!--Double-->
+        <scene sceneID="ZfK-oj-c4y">
+            <objects>
+                <viewController id="KvA-gW-6Wv" customClass="DoubleComponentPickerViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kcO-Mr-f5D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuY-J1-ZsG">
+                                <rect key="frame" x="165" y="318" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="KvA-gW-6Wv" eventType="touchUpInside" id="Vky-nG-2tk"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoZ-oM-OYd">
+                                <rect key="frame" x="27" y="0.0" width="321" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KvA-gW-6Wv" id="zyg-Ze-oaR"/>
+                                    <outlet property="delegate" destination="KvA-gW-6Wv" id="ZeZ-Uq-sT9"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BoZ-oM-OYd" firstAttribute="centerX" secondItem="ZuY-J1-ZsG" secondAttribute="centerX" id="2g7-EN-y5K"/>
+                            <constraint firstItem="BoZ-oM-OYd" firstAttribute="leading" secondItem="Y0o-40-Ihq" secondAttribute="leading" constant="27" id="M5o-Mu-frh"/>
+                            <constraint firstItem="BoZ-oM-OYd" firstAttribute="centerX" secondItem="kcO-Mr-f5D" secondAttribute="centerX" id="jBW-8M-TDd"/>
+                            <constraint firstItem="BoZ-oM-OYd" firstAttribute="top" secondItem="Y0o-40-Ihq" secondAttribute="top" id="jWk-4N-Myo"/>
+                            <constraint firstItem="ZuY-J1-ZsG" firstAttribute="top" secondItem="BoZ-oM-OYd" secondAttribute="bottom" constant="102" id="k1K-be-SM6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y0o-40-Ihq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="QhO-2E-0dv"/>
+                    <connections>
+                        <outlet property="doublePicker" destination="BoZ-oM-OYd" id="Bdh-W1-sJu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEe-Hv-sZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="-302"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yLZ-Ym-xOV">
+            <objects>
+                <tabBarController id="PlG-2I-DrK" customClass="ViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tw6-Da-eC5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ws1-Z9-BVm" kind="relationship" relationship="viewControllers" id="27G-6J-h5e"/>
+                        <segue destination="3jt-65-WGB" kind="relationship" relationship="viewControllers" id="HkJ-Um-ggx"/>
+                        <segue destination="KvA-gW-6Wv" kind="relationship" relationship="viewControllers" id="o8W-ef-jRA"/>
+                        <segue destination="PdO-aR-13S" kind="relationship" relationship="viewControllers" id="jqD-PV-o3m"/>
+                        <segue destination="wt6-He-Ab4" kind="relationship" relationship="viewControllers" id="qFd-7p-IqF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpC-nP-LjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clockicon" width="24" height="24"/>
+        <image name="dependenticon" width="25" height="24"/>
+        <image name="doubleicon" width="25" height="24"/>
+        <image name="singleicon" width="25" height="24"/>
+        <image name="toolicon" width="24" height="24"/>
+    </resources>
+</document>
