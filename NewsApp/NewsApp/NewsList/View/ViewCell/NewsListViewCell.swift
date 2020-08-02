@@ -23,7 +23,7 @@ class NewsListViewCell: UITableViewCell {
 
     func setupItem(item: NewsItem) {
         self.titleLable.text = item.title ?? ""
-        self.contentLable.text = item.description ?? ""
+        self.contentLable.text = item._description ?? ""
         self.dataLable.text = item.publishedAt ?? ""
         
         if let imageUrl = item.urlToImage, let url = URL(string: imageUrl) {

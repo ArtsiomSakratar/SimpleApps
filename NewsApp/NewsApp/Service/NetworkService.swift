@@ -28,10 +28,10 @@ enum Methods {
 class NetworkService: NSObject, INetworkService {
     let config: INetworkConfiguration = NetworkConfiguration()
     
-    var URLConfiguration = URLSessionConfiguration.default
+    var urLConfiguration = URLSessionConfiguration.default
     
     lazy var urlSession: URLSession? = {
-        return URLSession(configuration: URLConfiguration)
+        return URLSession(configuration: urLConfiguration)
     }()
     
     var dataTask: URLSessionDataTask? = nil

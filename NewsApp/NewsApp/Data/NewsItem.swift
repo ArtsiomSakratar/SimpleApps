@@ -21,6 +21,7 @@ class NewsItem: NSObject, Codable {
         case author = "author"
         case urlToImage = "urlToImage"
         case publishedAt = "publishedAt"
+        case _description = "description"
         case content = "content"
     }
 }

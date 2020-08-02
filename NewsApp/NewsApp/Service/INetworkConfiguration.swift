@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol INetworkConfiguration {
+protocol INetworkConfiguration : class {
     func getHeaders() -> [String : String]
     
     func getBaseURL() -> String
