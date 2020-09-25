@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  iOS-Example
 //
-//  Created by Burcu Geneci on 1.10.2019.
-//  Copyright © 2019 Burcu Geneci. All rights reserved.
+//  Created by Artsiom Sakratar on 9/24/20.
+//  Copyright © 2020 Artsiom Sakratar. All rights reserved.
 //
 
 import UIKit
