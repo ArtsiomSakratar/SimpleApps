@@ -29,11 +29,12 @@ class ViewController: UIViewController {
     @IBAction func numberClicked(_ sender: UIButton) {
         numberLabel.text = calculator.numberButtonClicked(sender.currentTitle!)
     }
-    @IBAction func mathButtonClicked(_ sender: UIButton) {
+    @IBAction func /Users/artsiom.sakratar/Desktop/Projects/iOS/Simple Apps/Calculator/Calculator/SceneDelegate.swiftmathButtonClicked(_ sender: UIButton) {
         numberLabel.text = calculator.mathButtonClicked(sender.currentTitle!)
     }
     @IBAction func equalClicked(_ sender: UIButton) {
         numberLabel.text = calculator.equalButtonPressed()
     }
+    
 }
-
+т
