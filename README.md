@@ -1,3 +1,3 @@
 # SimpleApps
 
-Here are all my simple swift apps.
+Here are all my simple Swift apps.
